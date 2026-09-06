@@ -1,16 +1,3 @@
-// Número primo. Diseñar un programa que tome como entrada un número entero positivo y diga si es primo
-// o no.
-// • Descripción de entrada: un número entero positivo mayor o igual a 2 y menor o igual a
-// 2000000.
-// • Descripción de salida: prime o not prime, según el caso.
-// • Ejemplo de entrada:
-// 7
-// • Ejemplo de salida:
-// prime
-// • Ejemplo de entrada 2:
-// 2113
-// • Ejemplo de salida 2:
-// prime
 
 import java.util.Scanner;
 
@@ -19,6 +6,7 @@ public class NumerosPrimos {
         Scanner scanner = new Scanner(System.in);
         int number = 0;
 
+        // Keep asking until the user enters a valid number (2, 2000000)
         while (number < 2 || number > 2000000) {
 
             System.out.print(
@@ -26,15 +14,18 @@ public class NumerosPrimos {
 
             number = scanner.nextInt();
 
-            // Validate user data
+            // Validate if the input is in the range
             if (number >= 2 && number <= 2000000) {
                 int count = 0;
+
+                // Count total divisors from 1 to number
                 for (int i = 1; i <= number; i++) {
                     if (number % i == 0) {
                         count++;
                     }
                 }
 
+                // A prime number has exactly two positive divisors: 1 and itself
                 if (count == 2) {
                     System.out.println("prime");
                 } else {
@@ -42,10 +33,11 @@ public class NumerosPrimos {
                 }
 
             } else {
+                // Notify user if input is out of the valid range
                 System.out.println("Error! You add a 0, a negative number or bigger than 2000000, try again");
             }
         }
-        scanner.close();
 
+        scanner.close();
     }
 }
