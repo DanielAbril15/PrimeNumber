@@ -1,41 +1,46 @@
-# Números Primos
+# Prime Numbers (Números Primos)
 
-Proyecto en Java para el análisis y manejo de números primos.
+A Java program that takes a positive integer as input and determines whether it is a prime number.
 
-## 📋 Descripción
+## 📋 Description
 
-Este repositorio contiene la estructura inicial para el desarrollo del programa de números primos.
+This program validates user input within a specified range and checks if the given integer is a prime number.
 
-## 🚀 Requisitos
+- **Input:** A positive integer greater than or equal to `2` and less than or equal to `2,000,000` ($2 \le n \le 2,000,000$).
+- **Output:** Outputs `prime` if the number is prime, or `not prime` otherwise.
 
-- [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/downloads/) versión 8 o superior.
+### Examples
 
-## 🛠️ Estructura del Proyecto
+| Input | Output |
+| :--- | :--- |
+| `2` | `prime` |
+| `7` | `prime` |
+| `70` | `not prime` |
+| `2113` | `prime` |
 
-```text
-NumerosPrimos/
-├── .github/
-│   └── workflows/
-│       └── build.yml
-├── src/
-│   └── NumerosPrimos.java
-├── .gitignore
-├── LICENSE
-└── README.md
-```
+---
 
-## ⚙️ Compilación y Ejecución
+## 🚀 Requirements
 
-### Compilar
+- [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/downloads/) version 8 or higher.
+
+---
+
+## ⚙️ Compilation and Execution
+
+You can run or compile the program using the standard Java CLI:
+
+### Direct Run (Java 11+)
 ```bash
-javac -d bin src/NumerosPrimos.java
+java NumerosPrimos.java
 ```
 
-### Ejecutar
+### Compile & Run
 ```bash
-java -cp bin NumerosPrimos
+# Compile
+javac NumerosPrimos.java
+
+# Run
+java NumerosPrimos
 ```
 
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
